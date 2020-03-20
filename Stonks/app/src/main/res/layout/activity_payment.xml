@@ -56,17 +56,37 @@
         android:layout_margin="16dp"
         android:orientation="vertical">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#6458FF"
+            android:orientation="horizontal"
             android:gravity="center"
-            android:padding="5dp"
-            android:text="Recipient"
-            android:textColor="#ffffff"
-            android:textAllCaps="true"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:padding="8dp">
+
+            <com.airbnb.lottie.LottieAnimationView
+                app:lottie_loop="false"
+                app:lottie_colorFilter="#ffffff"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:lottie_autoPlay="true"
+                android:layout_gravity="center"
+                app:lottie_fileName="147-outline-user.json" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Recipient"
+                android:textColor="#ffffff"
+                android:textAllCaps="true"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
 
         <EditText
             android:id="@+id/et_recipient"
@@ -89,17 +109,35 @@
         android:layout_margin="16dp"
         android:orientation="vertical">
 
-        <TextView
-            android:background="#6458FF"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Transfer Amount"
-            android:textSize="22sp"
-            android:textColor="#ffffff"
-            android:padding="5dp"
+            android:background="#6458FF"
+            android:orientation="horizontal"
             android:gravity="center"
-            android:textStyle="bold"
-            android:textAllCaps="true"/>
+            android:padding="8dp">
+
+            <com.airbnb.lottie.LottieAnimationView
+                app:lottie_loop="false"
+                app:lottie_colorFilter="#ffffff"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:lottie_autoPlay="true"
+                android:layout_gravity="center"
+                app:lottie_fileName="11456-coin.json" />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Transfer Amount"
+                android:textColor="#ffffff"
+                android:textAllCaps="true"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -124,7 +162,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="Stonks"
-                android:gravity="bottom"
+                android:gravity="center"
                 android:textColor="#ffffff"
                 android:textSize="20sp"
                 android:padding="10dp"/>

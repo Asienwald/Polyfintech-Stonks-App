@@ -61,17 +61,25 @@
                 style="@style/CardStyle">
 
                 <LinearLayout
-                    android:padding="16dp"
+                    android:padding="8dp"
                     android:orientation="vertical"
                     android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/transfer"
-                        app:srcCompat="@drawable/transfer" />
+<!--                    <ImageView-->
+<!--                        android:layout_width="80dp"-->
+<!--                        android:layout_height="80dp"-->
+<!--                        android:src="@drawable/transfer"-->
+<!--                        app:srcCompat="@drawable/transfer" />-->
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        style="@style/OnAnimations"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        app:lottie_autoPlay="true"
+                        android:layout_gravity="center"
+                        app:lottie_fileName="8434-nfc-payment.json" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -90,16 +98,19 @@
                 style="@style/CardStyle">
 
                 <LinearLayout
-                    android:padding="16dp"
+                    android:padding="8dp"
                     android:orientation="vertical"
                     android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
-                        android:src="@drawable/pay"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"/>
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        app:lottie_autoPlay="true"
+                        android:layout_gravity="center"
+                        app:lottie_fileName="7337-credit-card-check-animation.json"
+                        style="@style/OnAnimations"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -118,17 +129,19 @@
                 style="@style/CardStyle">
 
                 <LinearLayout
-                    android:padding="16dp"
+                    android:padding="8dp"
                     android:orientation="vertical"
                     android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/put_coin"
-                        app:srcCompat="@drawable/put_coin" />
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        app:lottie_autoPlay="true"
+                        android:layout_gravity="center"
+                        app:lottie_fileName="9072-coin.json"
+                        style="@style/OnAnimations"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -147,17 +160,19 @@
                 style="@style/CardStyle">
 
                 <LinearLayout
-                    android:padding="16dp"
+                    android:padding="8dp"
                     android:orientation="vertical"
                     android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/manage"
-                        app:srcCompat="@drawable/manage" />
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        app:lottie_autoPlay="true"
+                        android:layout_gravity="center"
+                        app:lottie_fileName="5064-safe-and-sound.json"
+                        style="@style/OnAnimations" />
 
                     <TextView
                         android:textSize="25sp"
@@ -176,17 +191,19 @@
                 style="@style/CardStyle">
 
                 <LinearLayout
-                    android:padding="16dp"
+                    android:padding="8dp"
                     android:orientation="vertical"
                     android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/piggy_bank"
-                        app:srcCompat="@drawable/piggy_bank" />
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        app:lottie_autoPlay="true"
+                        android:layout_gravity="center"
+                        app:lottie_fileName="4967-onboarding-piggy-bank.json"
+                        style="@style/OnAnimations"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -205,16 +222,19 @@
                 style="@style/CardStyle">
 
                 <LinearLayout
-                    android:padding="16dp"
+                    android:padding="8dp"
                     android:orientation="vertical"
                     android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
-                        android:src="@drawable/analyse"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"/>
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        app:lottie_autoPlay="true"
+                        android:layout_gravity="center"
+                        app:lottie_fileName="16420-convert.json"
+                        style="@style/OnAnimations"/>
 
                     <TextView
                         android:textSize="25sp"
@@ -233,16 +253,19 @@
                 style="@style/CardStyle">
 
                 <LinearLayout
-                    android:padding="16dp"
+                    android:padding="8dp"
                     android:orientation="vertical"
                     android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
-                        android:src="@drawable/incentives"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"/>
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        app:lottie_autoPlay="true"
+                        android:layout_gravity="center"
+                        app:lottie_fileName="4661-logistic-coupon-json-animation.json"
+                        style="@style/OnAnimations"/>
 
                     <TextView
                         android:textSize="21sp"
@@ -260,17 +283,19 @@
                 style="@style/CardStyle">
 
                 <LinearLayout
-                    android:padding="16dp"
+                    android:padding="8dp"
                     android:orientation="vertical"
                     android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/funding"
-                        app:srcCompat="@drawable/funding" />
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        app:lottie_autoPlay="true"
+                        android:layout_gravity="center"
+                        app:lottie_fileName="7208-gears-animation.json"
+                        style="@style/OnAnimations"/>
 
                     <TextView
                         android:layout_width="wrap_content"
