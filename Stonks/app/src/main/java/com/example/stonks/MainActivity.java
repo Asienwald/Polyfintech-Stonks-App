@@ -57,11 +57,11 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         new AlertDialog.Builder(this)
                 .setTitle("Log Out?")
-                .setMessage("Log out of Stonks and return to Login Page?")
+                .setMessage("Log out and return to Login Page?")
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        finish();
+                        startActivity(new Intent(MainActivity.this, LoginActivity.class));
                     }
                 })
                 .setNegativeButton("No", null)
