@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/stonks_icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ConfirmationActivity">
+
+        </activity>
+        <activity android:name=".PaymentActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
