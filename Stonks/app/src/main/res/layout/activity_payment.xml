@@ -15,7 +15,7 @@
         android:textSize="35sp"
         android:gravity="center"
         android:textColor="#ffffff"
-        android:paddingTop="16dp"
+        android:paddingTop="20dp"
         android:paddingBottom="16dp"/>
 
     <LinearLayout
@@ -73,6 +73,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/et_bg"
             android:hint="Username"
+            android:inputType="text"
             android:textSize="20sp"
             android:textColorHint="@color/login_form_details_medium"
             android:padding="16dp"
@@ -114,7 +115,8 @@
                 android:padding="16dp"
                 android:hint="0.00"
                 android:background="@null"
-                android:textColorHint="@color/login_form_details_medium"/>
+                android:textColorHint="@color/login_form_details_medium"
+                android:textColor="#ffffff"/>
 
             <TextView
                 android:layout_width="wrap_content"

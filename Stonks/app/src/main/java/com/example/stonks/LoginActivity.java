@@ -58,6 +58,11 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    private void ClearInputs(){
+        et_username.getText().clear();
+        et_password.getText().clear();
+    }
+
     // Toggle password et to visible
     private void ToggleShowPassword(){
         Log.d("KW", "Toggle show Password!");
@@ -90,9 +95,13 @@ public class LoginActivity extends AppCompatActivity {
     private void Login(View v){
         boolean _valid = ValidateLoginCredentials();
 
+        ClearInputs();
+
         if(_valid){
             Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
+        }else{
+            Toast.makeText(this, "Login Credentials Incorrect", Toast.LENGTH_SHORT).show();
         }
     }
 
