@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         // put it into the intent mapping
         card_to_intent_dict.put(card_transfer, PaymentActivity.class);
+        card_to_intent_dict.put(card_manage, ManageActivity.class);
 
         // add onclick function to bring to specified class to each card view
         InitCardsOnClick();

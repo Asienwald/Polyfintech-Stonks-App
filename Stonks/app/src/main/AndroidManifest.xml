@@ -12,6 +12,7 @@
         <activity android:name=".ConfirmationActivity">
 
         </activity>
+        <activity android:name=".ManageActivity" />
         <activity android:name=".PaymentActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
