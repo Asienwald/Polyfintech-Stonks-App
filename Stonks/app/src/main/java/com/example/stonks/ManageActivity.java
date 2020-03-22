@@ -26,6 +26,8 @@ public class ManageActivity extends AppCompatActivity {
     private EditText et_amount;
     private Button btn_topup;
 
+    final double EXCHANGE_RATE = 0.69f;
+
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -52,7 +54,7 @@ public class ManageActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 DecimalFormat decimalFormat = new DecimalFormat("0.00");
                 double stonks = Double.parseDouble(et_amount.getText().toString());
-                double price = stonks * 0.69;
+                double price = stonks * EXCHANGE_RATE;
                 btn_topup.setText("TOP UP! ("+ decimalFormat.format(price) + "SGD)");
             }
 

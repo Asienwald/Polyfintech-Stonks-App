@@ -1,8 +1,10 @@
 package com.example.stonks;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Debug;
@@ -58,6 +60,22 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle("Exit App?")
+                .setMessage("Exit and close Stonks?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                        finishAffinity();
+                    }
+                })
+                .setNegativeButton("No", null)
+                .show();
+    }
+
     private void ClearInputs(){
         et_username.getText().clear();
         et_password.getText().clear();
@@ -100,8 +118,6 @@ public class LoginActivity extends AppCompatActivity {
         if(_valid){
             Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
-        }else{
-            Toast.makeText(this, "Login Credentials Incorrect", Toast.LENGTH_SHORT).show();
         }
     }
 
