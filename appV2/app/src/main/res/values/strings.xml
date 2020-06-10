@@ -12,4 +12,6 @@
     <string name="stk_default">STK 0.00</string>
     <string name="btc_default">BTC 0.00</string>
     <string name="all">All</string>
+    <string name="news">News</string>
+    <string name="jobs">Jobs</string>
 </resources>
