@@ -14,4 +14,12 @@
     <string name="all">All</string>
     <string name="news">News</string>
     <string name="jobs">Jobs</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="manage">Manage</string>
+    <string name="sgd">SGD</string>
+    <string name="zero">0.00</string>
+    <string name="eth">ETH</string>
+    <string name="transfer">Transfer</string>
+    <string name="history">History</string>
+    <string name="stats">Stats</string>
 </resources>

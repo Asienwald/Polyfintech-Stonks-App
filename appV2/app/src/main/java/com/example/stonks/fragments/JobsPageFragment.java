@@ -38,9 +38,9 @@ public class JobsPageFragment extends Fragment {
 
         // create the list of news (handled somewhere else when database setup
         ArrayList<JobsCard> jobsList = new ArrayList<>();
-        jobsList.add(new JobsCard("Help buy fish thank", "Kar Wei | Posted 05/06/2020", "3.07 STKS"));
-        jobsList.add(new JobsCard("Help buy sweet thank", "Kar Wei | Posted 05/06/2020", "3.07 STKS"));
-        jobsList.add(new JobsCard("Help buy xmm thank", "Kar Wei | Posted 05/06/2020", "3.07 STKS"));
+        jobsList.add(new JobsCard("Help blue_button fish thank", "Kar Wei | Posted 05/06/2020", "3.07 STKS"));
+        jobsList.add(new JobsCard("Help blue_button sweet thank", "Kar Wei | Posted 05/06/2020", "3.07 STKS"));
+        jobsList.add(new JobsCard("Help blue_button xmm thank", "Kar Wei | Posted 05/06/2020", "3.07 STKS"));
 
         mJobsRV = view.findViewById(R.id.jobs_rv);
         mJobsRV.setHasFixedSize(true);

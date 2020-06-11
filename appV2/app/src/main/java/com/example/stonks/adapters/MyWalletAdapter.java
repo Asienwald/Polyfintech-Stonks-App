@@ -9,13 +9,13 @@ import com.example.stonks.fragments.MyWallet;
 
 import java.util.ArrayList;
 
-public class HomePageAdapter extends FragmentStateAdapter {
+public class MyWalletAdapter extends FragmentStateAdapter {
     private static final int PAGE_NUM = 2;
     private MyWallet my_wallet = new MyWallet();
     private History history = new History();
     ArrayList<Fragment> fragment_list = new ArrayList<>();
 
-    public HomePageAdapter(Fragment fragment){
+    public MyWalletAdapter(Fragment fragment){
         super(fragment);
         fragment_list.add(my_wallet);
         fragment_list.add(history);

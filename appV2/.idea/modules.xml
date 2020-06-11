@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Stonks.iml" filepath="$PROJECT_DIR$/.idea/modules/Stonks.iml" group="Stonks" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Stonks-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Stonks-app.iml" group="Stonks/app" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="Stonks/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/appV2-Stonks.iml" filepath="$PROJECT_DIR$/.idea/modules/appV2-Stonks.iml" group="Stonks" />
     </modules>
   </component>
 </project>
