@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:elevation="5dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="25dp">
+
+            <TextView
+                android:id="@+id/job_card_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Help me catch Dragonite in Pokemon GO!!"
+                android:fontFamily="@font/unispace"
+                android:textColor="@color/card_title"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp">
+
+                <TextView
+                    android:id="@+id/job_card_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="2dp"
+                    android:text="Username | Posted 09/06/2020"
+                    android:textColor="@color/card_details"
+                    android:fontFamily="@font/unispace"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:id="@+id/job_star_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="41dp"
+                    android:src="@drawable/gold_star" />
+
+                <ImageView
+                    android:id="@+id/job_share_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="1dp"
+                    android:src="@drawable/share" />
+
+                <LinearLayout
+                    android:id="@+id/job_tag_holder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginBottom="39dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:background="@color/light_blue"
+                        android:elevation="5dp"
+                        android:fontFamily="@font/unispace"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:padding="5dp"
+                        android:text="Game"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:background="@color/light_blue"
+                        android:elevation="5dp"
+                        android:fontFamily="@font/unispace"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:padding="5dp"
+                        android:text="One-time"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="130dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/unispace"
+                    android:text="UP TO"
+                    android:textAllCaps="true"
+                    android:textColor="@color/light_blue"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/jobs_stonks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:fontFamily="@font/erasbold"
+                    android:text="2.05 STKS"
+                    android:textAllCaps="true"
+                    android:textColor="@color/orange_red"
+                    android:textSize="24sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
