@@ -2,7 +2,7 @@ const StkToken = artifacts.require("./StkToken.sol");
 
 // where all our migration files will go
 module.exports = function(deployer) {
-  deployer.deploy(StkToken);
+  deployer.deploy(StkToken, 1000000);
 };
 
 /*
