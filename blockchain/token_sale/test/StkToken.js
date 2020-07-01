@@ -77,4 +77,82 @@ contract("StkToken", (accounts) => {
             assert.equal(balance.toNumber(), 750000, "amount deducted from sending account");
         })
     })
+
+    it("approves tokens for delegated transfer", () => {
+        return StkToken.deployed().then((instance) => {
+            tokenInstance = instance;
+            return tokenInstance.approve.call(accounts[1], 100);
+        }).then((success) => {
+            assert.equal(success, true, "approve returns true");
+
+            return tokenInstance.approve(accounts[1], 100, {from: accounts[0]});
+        }).then((receipt) => {
+            // receipt has logs
+            assert.equal(receipt.logs.length, 1, 'triggers one event');
+            // make sure is transfer event
+            assert.equal(receipt.logs[0].event, 'Approval', 'should be the "Approval" event');
+            // make sure event has all arguments who looking for
+            assert.equal(receipt.logs[0].args._owner, accounts[0], 'logs the account the tokens are authorised by');
+            assert.equal(receipt.logs[0].args._spender, accounts[1], 'logs the account the tokens are authorised to');
+            assert.equal(receipt.logs[0].args._value, 100, 'logs the transfer amount');
+
+            return tokenInstance.allowance(accounts[0], accounts[1]);
+        }).then((allowance) => {
+            assert.equal(allowance.toNumber(), 100, "stores allowance for delegated transfers");
+        })
+    });
+
+    it("handles delegated token transfers", () => {
+        return StkToken.deployed().then((instance) => {
+            tokenInstance = instance;
+
+            fromAcc = accounts[2];
+            toAcc = accounts[3];
+            spendingAcc = accounts[4];
+
+            // transfer some tokens to fromAcc so we can test
+            return tokenInstance.transfer(fromAcc, 100, {from: accounts[0]})
+        }).then((receipt) => {
+            // approve spendingAcc to spend 10 tokens from fromAcc
+            return tokenInstance.approve(spendingAcc, 10, {from: fromAcc});
+        }).then((receipt) => {
+            // try transferring sth larger than sender's balance
+            return tokenInstance.transferFrom(fromAcc, toAcc, 999, {from: spendingAcc});
+        }).then(assert.fail).catch((err) => {
+            assert(err.message.indexOf("revert") >= 0, "cannot transfer value larger than balance");
+
+            // try transferring sth larger than approved amt (allowance)
+            return tokenInstance.transferFrom(fromAcc, toAcc, 20, {from: spendingAcc});
+        }).then(assert.fail).catch((err) => {
+            assert(err.message.indexOf("revert") >= 0, "cannot transfer value larger than allowance");
+
+            return tokenInstance.transferFrom.call(fromAcc, toAcc, 10, {from: spendingAcc});
+        }).then((success) => {
+            assert.equal(success, true);
+
+            // create actual transaction (no call) - will change state of blockchain
+            return tokenInstance.transferFrom(fromAcc, toAcc, 10, {from: spendingAcc});
+        }).then((receipt) => {
+            // receipt has logs
+            assert.equal(receipt.logs.length, 1, 'triggers one event');
+            // make sure is transfer event
+            assert.equal(receipt.logs[0].event, 'Transfer', 'should be the "Transfer" event');
+            // make sure event has all arguments who looking for
+            assert.equal(receipt.logs[0].args._from, fromAcc, 'logs the account the tokens are tramsferred from');
+            assert.equal(receipt.logs[0].args._to, toAcc, 'logs the account the tokens are transferred to');
+            assert.equal(receipt.logs[0].args._value, 10, 'logs the transfer amount');
+
+            return tokenInstance.balanceOf(fromAcc);
+        }).then((balance) => {
+            assert.equal(balance.toNumber(), 90, "amt deducted from sending account");
+
+            return tokenInstance.balanceOf(toAcc);
+        }).then((balance) => {
+            assert.equal(balance.toNumber(), 10, "amt added to receiving account");
+
+            return tokenInstance.allowance(fromAcc, spendingAcc);
+        }).then((allowance) => {
+            assert.equal(allowance.toNumber(), 0, "deducts amount from allowance");
+        })
+    })
 })
