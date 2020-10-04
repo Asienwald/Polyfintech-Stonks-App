@@ -1,0 +1,243 @@
+{
+  "contractName": "EthSwap",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/asien/Documents/GitHub/Stonks-App/blockchain/token_sale/contracts/EthSwap.sol\":\"EthSwap\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/asien/Documents/GitHub/Stonks-App/blockchain/token_sale/contracts/EthSwap.sol\":{\"keccak256\":\"0xb5dc5c5a5316f13bfda6f49cb3b235aa0da78e9250c4e72555cf17a8ad331219\",\"urls\":[\"bzz-raw://f0327a4b37c4b4bbbcdc985384532789130b30d57ddbcef882396414b02e6921\",\"dweb:/ipfs/QmNzQ2s6dGyJvpRJWWPbM657Y9CgeZzaXJ7D1b6JwUL4ZA\"]},\"/C/Users/asien/Documents/GitHub/Stonks-App/blockchain/token_sale/contracts/StkToken.sol\":{\"keccak256\":\"0x0a0af7b23525c7974fe7188d916e12a409b70723a23f2ba37fbb01c5c4e6e044\",\"urls\":[\"bzz-raw://ba1e20b0f4fcc52ca841be4bae38e652b72ab8b0d7b94a06117517fb66e5485a\",\"dweb:/ipfs/QmZRamWkVE1rvCdXocsHrukNF25WrN17mEPHYfgqr719Kt\"]}},\"version\":1}",
+  "bytecode": "0x60806040526040518060400160405280601981526020017f4574685377617020496e7374616e63652045786368616e6765000000000000008152506000908051906020019061004f929190610062565b5034801561005c57600080fd5b50610107565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100a357805160ff19168380011785556100d1565b828001600101855582156100d1579182015b828111156100d05782518255916020019190600101906100b5565b5b5090506100de91906100e2565b5090565b61010491905b808211156101005760008160009055506001016100e8565b5090565b90565b610186806101166000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c806306fdde0314610030575b600080fd5b6100386100b3565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561007857808201518184015260208101905061005d565b50505050905090810190601f1680156100a55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101495780601f1061011e57610100808354040283529160200191610149565b820191906000526020600020905b81548152906001019060200180831161012c57829003601f168201915b50505050508156fea265627a7a72315820d6efba1efb0e17226285e7de2e4ca9f08e276316f503a4a4d75b5cdb2f77384364736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c806306fdde0314610030575b600080fd5b6100386100b3565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561007857808201518184015260208101905061005d565b50505050905090810190601f1680156100a55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101495780601f1061011e57610100808354040283529160200191610149565b820191906000526020600020905b81548152906001019060200180831161012c57829003601f168201915b50505050508156fea265627a7a72315820d6efba1efb0e17226285e7de2e4ca9f08e276316f503a4a4d75b5cdb2f77384364736f6c63430005100032",
+  "sourceMap": "64:75:0:-;;;87:48;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;64:75;8:9:-1;5:2;;;30:1;27;20:12;5:2;64:75:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "64:75:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;64:75:0;;;;;;;;;;;;;;;;;;;87:48;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;87:48:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity >=0.4.21 <0.7.0;\r\n\r\nimport \"./StkToken.sol\";\r\n\r\ncontract EthSwap{\r\n    string public name = \"EthSwap Instance Exchange\";\r\n}\r\n",
+  "sourcePath": "C:\\Users\\asien\\Documents\\GitHub\\Stonks-App\\blockchain\\token_sale\\contracts\\EthSwap.sol",
+  "ast": {
+    "absolutePath": "/C/Users/asien/Documents/GitHub/Stonks-App/blockchain/token_sale/contracts/EthSwap.sol",
+    "exportedSymbols": {
+      "EthSwap": [
+        6
+      ]
+    },
+    "id": 7,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "absolutePath": "/C/Users/asien/Documents/GitHub/Stonks-App/blockchain/token_sale/contracts/StkToken.sol",
+        "file": "./StkToken.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 7,
+        "sourceUnit": 228,
+        "src": "36:24:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6,
+        "linearizedBaseContracts": [
+          6
+        ],
+        "name": "EthSwap",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 5,
+            "name": "name",
+            "nodeType": "VariableDeclaration",
+            "scope": 6,
+            "src": "87:48:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 3,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "87:6:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "4574685377617020496e7374616e63652045786368616e6765",
+              "id": 4,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "108:27:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_3a7c049147a7f5bc95ecaaf766a9adee04923cf1f27b7f186687c25e5d4b030b",
+                "typeString": "literal_string \"EthSwap Instance Exchange\""
+              },
+              "value": "EthSwap Instance Exchange"
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 7,
+        "src": "64:75:0"
+      }
+    ],
+    "src": "0:141:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/asien/Documents/GitHub/Stonks-App/blockchain/token_sale/contracts/EthSwap.sol",
+    "exportedSymbols": {
+      "EthSwap": [
+        6
+      ]
+    },
+    "id": 7,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "absolutePath": "/C/Users/asien/Documents/GitHub/Stonks-App/blockchain/token_sale/contracts/StkToken.sol",
+        "file": "./StkToken.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 7,
+        "sourceUnit": 228,
+        "src": "36:24:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6,
+        "linearizedBaseContracts": [
+          6
+        ],
+        "name": "EthSwap",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 5,
+            "name": "name",
+            "nodeType": "VariableDeclaration",
+            "scope": 6,
+            "src": "87:48:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 3,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "87:6:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "4574685377617020496e7374616e63652045786368616e6765",
+              "id": 4,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "108:27:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_3a7c049147a7f5bc95ecaaf766a9adee04923cf1f27b7f186687c25e5d4b030b",
+                "typeString": "literal_string \"EthSwap Instance Exchange\""
+              },
+              "value": "EthSwap Instance Exchange"
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 7,
+        "src": "64:75:0"
+      }
+    ],
+    "src": "0:141:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x58987Cff05b2F79a9806d0E395B0353428E7a333",
+      "transactionHash": "0x41c721755640528fe8f228c3f22140fd95219cd5b9478e80efc8e204b6c03872"
+    }
+  },
+  "schemaVersion": "3.2.0",
+  "updatedAt": "2020-07-01T17:43:17.540Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
