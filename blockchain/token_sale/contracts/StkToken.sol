@@ -12,9 +12,13 @@ contract StkToken {
     // not part of erc-20 standard but just shows your ver of smart contract
     string public standard = "STNK Token v1.0";
 
+    // has 18 decimals behind it's value
+    // in money, our smallest value is called cents; in ether, its called wei
+    uint8 public decimals = 18;
+
     // unsigned public int
     // the public visibility auto adds a getter func to this var
-    uint256 public totalSupply;
+    uint256 public totalSupply = 1000000000000000000000000;
 
     // mapping(key, value) = hashmap<key, value> in java
     // this mapping responsible in knowing who has which token
@@ -41,15 +45,13 @@ contract StkToken {
     // Constructor - run whenever smart contract deployed
     // Set total num of tokens
     // read total num of tokens
-    constructor(uint256 _initialSupply) public{
+    constructor() public{
         // msg is global var in solidity
         // sender is address that called this function
         // read official docs of solidity pls thx
-        balanceOf[msg.sender] = _initialSupply;
-        
+        balanceOf[msg.sender] = totalSupply;
         // num of tokens that will exist
         // state var - kinda like a class var in other lang
-        totalSupply = _initialSupply;
 
         // allocate initial supply
     }
